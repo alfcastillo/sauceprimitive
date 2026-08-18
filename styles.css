@@ -181,6 +181,33 @@ h1 small { font-size: .42em; font-weight: 600; vertical-align: .2em; }
 .claims-visual { display: flex; gap: .5rem; margin: 4rem 0 2rem; }
 .claims-visual span { flex: 1; border-top: 3px solid var(--ink); padding-top: .5rem; font: 700 .7rem "Manrope", sans-serif; }
 
+.contact-section { background: var(--coral); color: var(--ink); }
+.contact-inner { max-width: var(--max); margin: auto; padding: 7rem clamp(1.25rem, 4vw, 3rem); }
+.contact-section .section-label span { color: var(--ink); }
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1.45fr;
+  gap: clamp(3rem, 8vw, 8rem);
+  margin-top: 3.5rem;
+  align-items: end;
+}
+.contact-kicker { margin: 0 0 1rem; font-weight: 600; }
+.contact-content h2 { font-size: clamp(3.6rem, 8vw, 7rem); }
+.contact-links { border-top: 1px solid rgba(23,26,31,.5); }
+.contact-links a {
+  display: grid;
+  grid-template-columns: 90px 1fr 24px;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(23,26,31,.5);
+  transition: padding .2s ease, background .2s ease;
+}
+.contact-links a:hover { padding-left: .75rem; background: rgba(255,255,255,.16); }
+.contact-links span { text-transform: uppercase; letter-spacing: .1em; font-size: .68rem; font-weight: 700; }
+.contact-links strong { font-size: clamp(.88rem, 2vw, 1.1rem); overflow-wrap: anywhere; }
+.contact-links b { justify-self: end; font-size: 1.1rem; }
+
 footer {
   background: #0d0f12;
   color: #c9cccd;
@@ -223,6 +250,7 @@ footer a { color: var(--white); border-bottom: 1px solid #555; padding-bottom: .
   .access-note { margin-left: 0; }
   .project-grid { grid-template-columns: 1fr; }
   .project-card { min-height: 440px; }
+  .contact-content { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
@@ -233,6 +261,12 @@ footer a { color: var(--white); border-bottom: 1px solid #555; padding-bottom: .
   .about h2, .section-heading h2 { font-size: 2.35rem; }
   .featured-story { padding: 1.5rem; min-height: 390px; }
   .featured-story h3 { font-size: 1.8rem; }
+  .contact-inner { padding: 5rem 1.25rem; }
+  .contact-content h2 { font-size: 3.5rem; }
+  .contact-links a { grid-template-columns: 1fr 24px; }
+  .contact-links span { grid-column: 1 / -1; }
+  .contact-links strong { grid-column: 1; }
+  .contact-links b { grid-column: 2; grid-row: 2; }
   footer { align-items: flex-start; flex-direction: column; gap: 2rem; }
 }
 
